@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import '../style/login.css';
 class login extends Component {
+    state={
+        from:{
+            phone:"",
+            password:""
+        }
+    }
     render() {
         return (
             <div className='login'>
