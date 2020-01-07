@@ -1,15 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
-
 export default class footer extends React.Component< any>{
-    static defaultProps = {
-        // defalutCls: 'keep-btn',
-        // loading: false,
-        // type: 'default',
-        // size: 'xm'
-    }
-    
     render() {
         return <>
             <footer>

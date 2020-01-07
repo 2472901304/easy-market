@@ -6,10 +6,18 @@ import Footer from '../../components/footer'
 export default class my extends React.Component< any> {
     render() {
         return (
-            <div className="wrap">
-                <header>
-                    my 我的页面
-                </header>
+            <div className="my">
+                <div className="header">
+                    <dl>
+                        <dt>
+                            <img src="" alt=""/>
+                        </dt>
+                        <dd>
+                            <p></p>
+                            <p></p>
+                        </dd>
+                    </dl>
+                </div>
                 <Footer></Footer>
             </div>
         );
