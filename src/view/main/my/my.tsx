@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../style/my.css'
-import '../../style/main.css'
-import Footer from '../../components/footer'
+import './my.css'
+import '../main.css'
+import Footer from '../../../components/footer'
 
 export default class my extends React.Component< any> {
     render() {

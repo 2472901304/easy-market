@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink, Redirect } from 'react-router-dom'
-import '../../style/main.css'
+import './main.css'
 
 
-export default class main extends React.Component< any>{
+export default class main extends React.Component<any>{
     static defaultProps = {
         // defalutCls: 'keep-btn',
         // loading: false,

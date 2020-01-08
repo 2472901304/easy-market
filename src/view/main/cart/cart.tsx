@@ -1,16 +1,14 @@
 import React from 'react';
-import '../../style/main.css'
-import '../../style/special.css'
-import Footer from '../../components/footer'
+import '../main.css'
+import './cart.css'
+import Footer from '../../../components/footer'
 
-export default class special extends React.Component<any> {
-
-
+export default class cart extends React.Component< any> {
     render() {
         return (
             <div className="wrap">
                 <header>
-                    专题页面
+                    cart 购物车页面
                 </header>
                 <Footer></Footer>
             </div>

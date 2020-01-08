@@ -2,11 +2,11 @@ import React from 'react'
 import RouterView from './RouterView'
 import Login from '../view/login'
 import Main from '../view/main/main'
-import Home from '../view/main/home'
-import Special from '../view/main/special'
-import Classify from '../view/main/classify'
-import Cart from '../view/main/cart'
-import My from '../view/main/my'
+import Home from '../view/main/home/home'
+import Special from '../view/main/special/special'
+import Classify from '../view/main/classify/classify'
+import Cart from '../view/main/cart/cart'
+import My from '../view/main/my/my'
 
 
 export default {

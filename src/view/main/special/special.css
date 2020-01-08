@@ -1,0 +1,22 @@
+.specialele{
+    width: 100%;
+}
+.specialele img{
+    width: 100%;
+    height:200px;
+}
+.specialele>div,p{
+    text-align: center;
+    line-height: 30px;
+}
+.specialele .title{
+    font-size: 16px;
+}
+.specialele .sub{
+    font-size: 16px;
+    color: #ccc;
+}
+.specialele p{
+    color: red;
+    margin-bottom: 5px;
+}

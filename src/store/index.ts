@@ -1,7 +1,8 @@
-import React from 'react'
-// 导入store
-import Cart from './cart'
+import Special from './modules/special'
+import Login from './modules/login'
+
 
 export default {
-    cart: new Cart()
+    Special: new Special(),
+    Login: new Login()
 }

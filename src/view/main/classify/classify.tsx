@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../style/main.css'
-import '../../style/classify.css'
-import Footer from '../../components/footer'
+import '../main.css'
+import './classify.css'
+import Footer from '../../../components/footer'
 
 export default class classify extends React.Component< any> {
     render() {
