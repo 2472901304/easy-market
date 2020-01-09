@@ -1,7 +1,7 @@
-import React from 'react'
 // 导入store
 import Cart from './cart'
-
+import Classify from './classify'
 export default {
-    cart: new Cart()
+    cart: new Cart(),
+    classify:new Classify()
 }
