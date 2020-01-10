@@ -7,7 +7,8 @@ import Special from '../view/main/special'
 import Classify from '../view/main/classify'
 import Cart from '../view/main/cart'
 import My from '../view/main/my'
-
+import Search from '../view/search'
+import Categorys from '../view/main/categorys'
 
 export default {
     routes: [{
@@ -18,9 +19,7 @@ export default {
         component: (props: any) => (
             <>
                 <RouterView routes={props.routes}></RouterView>
-                <Main>
-                
-                </Main>
+                <Main></Main>
             </>
         ),
         children: [{
@@ -39,8 +38,17 @@ export default {
             path: '/main/my',
             component: () => <My></My>
         }]
-    },{
-        from: '*',
+    },
+    {
+        path:'/search',
+        component:()=><Search></Search>
+    },
+    {
+        path:'/categorys',
+        component:()=><Categorys></Categorys>
+    },
+    {
+        from: '/',
         to: '/login'
     }]
 }

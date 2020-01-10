@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import {useHistory} from 'react-router-dom';
 import '../../style/main.css'
 import '../../style/classify.css'
 import Footer from '../../components/footer'
@@ -7,8 +8,8 @@ import { useObserver } from 'mobx-react-lite'
 
 const App: React.FC = () => {
     let store = useStore();
-    let { classify } = store
-
+    let { classify,category } = store
+    let history = useHistory();
     useEffect(() => {
         classify.setList()
     }, [])
@@ -21,13 +22,20 @@ const App: React.FC = () => {
     
     //搜索-------------------------------------
     let search = ()=>{
-      
+      history.push('/search')
     }
+
+    //奇趣分类-----------------------------------
+    let categorys = (id:number)=>{
+        history.push('/categorys')
+        category.setCategoryList(id)
+    }
+   
     return useObserver(() => <>
         <div className="wrap">
             <div className="classify">
                 <div className="top">
-                    <input onClick={()=>search()} type="text" placeholder='搜索商品,共239款好物' />
+                    <input onClick={()=>search()} type="text" placeholder={`搜索商品,共${classify.count}款好物`} />
                 </div>
                 <div className="main">
                     <div className="left">
@@ -44,9 +52,9 @@ const App: React.FC = () => {
                         <div className="title">-{classify.rightList.name}分类-</div>
                         <div className="box">
                             {
-                                  classify.rightBoxList?
+                                classify.rightBoxList?
                                 classify.rightBoxList.map((item: any, index: number) => {
-                                    return <dl key={index}>
+                                    return <dl onClick={()=>categorys(item.id)} key={index}>
                                         <dt>
                                             <img src={item.banner_url} alt="" />
                                         </dt>

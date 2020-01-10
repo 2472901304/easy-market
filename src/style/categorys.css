@@ -1,0 +1,43 @@
+.categorys {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(240, 236, 236);
+}
+
+.categorys .top {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.categorys .top .left {
+    width: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.categorys .top .right {
+    flex: 1;
+    text-align: center;
+    padding-right: 30px;
+}
+
+.categorys .nav {
+    height: 40px;
+    overflow: auto;
+    line-height: 40px;
+    display: flex;
+    background: #fff;
+}
+
+.categorys .nav span {
+    margin: 0 15px;
+    flex-shrink: 0;
+}
+
+.activeC {
+    color: rgb(72, 112, 223);
+    border-bottom: 2px solid rgb(72, 112, 223);
+}

@@ -1,11 +1,7 @@
-import React from 'react'
+
 import { ItemType } from '../utils/type';
-import { observable, action, computed } from 'mobx'
-import { classify } from '../api/classify'
-import { act } from 'react-dom/test-utils';
-interface rightparams{
-    [key:string]:any
-}
+import { observable, action } from 'mobx'
+import { classify,goodsCount } from '../api/classify'
 
 export default class HomeStore {
 
@@ -13,6 +9,8 @@ export default class HomeStore {
     @observable
     list: ItemType[] = []
 
+    @observable
+    count:number= 0
     //获取右侧内容------------------
     @observable
     rightList:any =[]
@@ -31,7 +29,8 @@ export default class HomeStore {
       this.list = res.categoryList  //设置所有数据
       this.rightList=res.categoryList[this.curIndex] //设置右侧数据
       this.rightBoxList = res.categoryList[this.curIndex].subCategoryList
-      console.log(res);
+      let count:any =await goodsCount(res.categoryList[0].subCategoryList[0].id)
+      this.count = count.goodsCount
     }
 
     @action
@@ -39,4 +38,6 @@ export default class HomeStore {
         this.curIndex = index
         this.categoryId = id
     }
+
+    
 }
