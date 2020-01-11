@@ -8,7 +8,7 @@ import { useObserver } from 'mobx-react-lite'
 
 const App: React.FC = () => {
     let store = useStore();
-    let { classify,category } = store
+    let { classify } = store
     let history = useHistory();
     useEffect(() => {
         classify.setList()
@@ -28,7 +28,7 @@ const App: React.FC = () => {
     //奇趣分类-----------------------------------
     let categorys = (id:number)=>{
         history.push('/categorys')
-        category.setCategoryList(id)
+        localStorage.setItem('id',JSON.stringify(id))
     }
    
     return useObserver(() => <>

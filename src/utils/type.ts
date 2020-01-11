@@ -6,5 +6,6 @@ export interface ItemType {
     price: number,
     banner_url:any,
     img_url:string,
-    img:string
+    img:string,
+    front_name:string
   }

@@ -37,6 +37,33 @@
     flex-shrink: 0;
 }
 
+.categorys .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.categorys .content .cont {
+    height: 80px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+}
+
+.categorys .content .cont p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.categorys .content .cont p:last-child {
+    color: #888;
+}
+
+.categorys .content .main {
+    flex: 1;
+}
+
 .activeC {
     color: rgb(72, 112, 223);
     border-bottom: 2px solid rgb(72, 112, 223);

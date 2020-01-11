@@ -20,6 +20,8 @@ export default class Search{
     async setList(){
         let res:any = await search() 
         this.list = res.hotKeywordList  
+        console.log(res);
+        
     }
 
     @action
